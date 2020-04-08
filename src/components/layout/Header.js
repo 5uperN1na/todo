@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 //functional component
 function Header() {
     return (
-       <header style={headerStyle}>
-           <h1>To Do List</h1>
-       </header>
+        <header style={headerStyle}>
+            <h1>To Do List</h1>
+            <Link style={linkStyle} to="/"> Home</Link> | 
+            <Link style={linkStyle} to="/about">About</Link>
+        </header>
     )
 }
 const headerStyle = {
@@ -16,4 +19,9 @@ const headerStyle = {
 
 }
 
+const linkStyle = {
+    color: "yellow",
+    textDecoration: 'none'
+
+}
 export default Header;
